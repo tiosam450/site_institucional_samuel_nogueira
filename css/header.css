@@ -1,0 +1,210 @@
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 60px 18% 1fr 5% 60px;
+    padding: 35px 0 0;
+    align-items: center;
+    z-index: 10;
+}
+
+.iconesContainerMobile {
+    display: none;
+}
+
+#iconeSam {
+    grid-column: 2;
+}
+
+#iconeSam img {
+    max-width: 42px;
+}
+
+.icones {
+    margin: 0 25px 0 0;
+    font-size: 1.3rem;
+    color: var(--branco);
+    transition: .25s ease-in-out all;
+}
+
+.icones:hover {
+    transform: scale(3);
+    color: var(--destaque);
+}
+
+.menu {
+    grid-column: 4;
+    text-align: center;
+    font-size: 1.3rem;    
+}
+
+.menu a {
+    color: var(--branco);
+    transition: .2s ease-in all;
+    
+}
+
+.menu a:hover {
+    padding: 15px 20px;
+    border-radius: 150px;
+    background: var(--destaque);
+    transform-origin: 20px 0;
+}
+
+.popMenu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100vh;
+    background: rgb(22, 22, 22);
+    z-index: 3000!important;
+}
+
+.popMenu p{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--destaque);
+    font-size: 1.3em;
+    font-weight: bolder;
+    padding: 5px 15px;
+    margin: 40px;
+    border: 3px solid var(--destaque);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.popMenu li{
+    list-style: none;
+    padding: 20px;
+}
+
+.popMenu li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    transition: .2s ease-in all;
+}
+
+.popMenu li a:hover{
+    color: var(--destaque);
+}
+
+@media (max-width: 1366px) {
+    #iconeSam img {
+        max-width: 33px;
+    }
+
+    .icones,
+    .menu a {
+        font-size: 1rem;
+        margin: 0 15px 0 0;
+    }
+
+    .popMenu{
+        width: 20%;
+        height: 100vh;
+        background: rgb(22, 22, 22);
+        z-index: 3000!important;
+    }
+
+    .popMenu li a{
+        color: white;
+        text-decoration: none;
+        font-size: .8em;
+        letter-spacing: 2px;
+        transition: .2s ease-in all;
+    }
+
+    .popMenu p{
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: var(--destaque);
+        font-size: .9em;
+        font-weight: bolder;
+        padding: 3px 9px;
+        margin: 40px;
+        border: 2px solid var(--destaque);
+        border-radius: 50px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1279px) {
+    header {
+        grid-template-columns: 30px 25% 1fr 5% 30px;
+        padding: 35px 0 0;
+    }
+
+    .iconesContainer {
+        display: none;
+    }
+
+    .iconesContainerMobile{
+        display: initial;
+    }
+
+    #iconeSam img {
+        max-width: 33px;
+    }
+
+    .icones,
+    
+    .menu a {
+        font-size: 1.3rem;
+        margin: 0 15px 0 0;
+    }
+    
+    .popMenu{
+        width: 30%;
+        height: 100vh;
+        background: rgb(22, 22, 22);
+        z-index: 3000!important;
+    }
+
+    .menu a:hover {
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        transform-origin: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .icones,
+    .menu a {
+        font-size: 1rem;
+        margin: 0 15px 0 0;
+    }
+
+    .popMenu{
+        width: 100%;
+        height: 100vh;
+        background: rgb(22, 22, 22);
+        z-index: 3000!important;
+    }
+
+    .menu a:hover {
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        transform-origin: 0;
+    }
+
+    .popMenu p{
+        font-size: .9em;
+        padding: 3px 9px;
+        margin: 40px;
+        border: 2px solid var(--destaque);
+        border-radius: 50px;
+
+    }
+}

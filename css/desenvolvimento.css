@@ -1,0 +1,259 @@
+/* Desenvolvimento */
+.desenv{
+    width: 100%;
+    height: 100vh;
+    grid-column: 3/5;
+    display: grid;
+    grid-template-columns: 60px 18% 1fr 5% 60px;
+    padding: 35px 0 0;
+    align-items: center;
+    background: url(../img/bg/bg.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.textoDesenv{
+    display: grid;
+    grid-template-columns: minmax(20%, 35%) 10% minmax(20%, 35%);
+    grid-column: 3;
+    row-gap: 30px;
+    color:white
+}
+
+.textoDesenv h1{
+    grid-column: 1/2;  
+    margin-top: 120px;
+    opacity: 0;
+}
+
+.coluna1{
+    grid-column: 1/2;
+    align-self: end;
+    opacity: 0;
+}
+
+.coluna2{
+    grid-column: 3/4;
+    align-self: end;
+    opacity: 0;
+}
+
+#caneta {
+    grid-column: 3/4;
+    grid-row: 1;
+    margin: -300px 100px -380px;
+    transform: rotate(255deg)!important;
+    max-width: 350px;
+    align-self: center;
+}
+
+.textoDesenv p:last-child {
+    margin-bottom: 0;
+}
+
+span {
+    display: block;
+    color: var(--destaque);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 -20px;
+}
+
+.textoDesenv p {
+    font-size: .8rem;
+    color: white;
+    margin-bottom: 40px;
+    line-height: 1.3rem;
+}
+
+details{
+    display: none;
+}
+
+@media (max-width: 1366px) {
+    .textoDesenv{
+        padding: 0 150px;
+        display: grid;
+        grid-template-columns: minmax(20%, 45%) 10% minmax(20%, 45%);
+        grid-column: 2/5;
+        justify-content: center;
+        row-gap: 30px;
+        color:white
+    }
+
+    .textoDesenv h1{
+        grid-column: 1/2;  
+        margin: 80px 0 0;  
+    }
+
+    .textoDesenv p {
+        font-size: .6rem;
+        line-height: 1rem;
+        letter-spacing: .05rem;
+        margin-bottom: 20px;
+    }
+
+    .textoDesenv p:last-child {
+        margin-bottom: 0;
+    }
+
+    span {
+        margin: 0 0 -15px;
+    }
+
+    #caneta {
+        max-width: 220px;
+        margin: -300px 100px -400px;
+
+    }
+}
+
+@media (max-width: 1280px) {
+    .textoDesenv{
+        grid-template-columns: minmax(20%, 45%) 10% minmax(20%, 45%);
+        grid-column: 3/4;
+        padding: 0;
+    }
+
+    #caneta {
+        margin: -300px 100px -330px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 1279px) {
+    .textoDesenv{
+        padding: 0;
+        grid-template-columns: minmax(20%, 45%) 10% minmax(20%, 45%);
+        grid-column: 2/4;
+    }
+
+    #caneta {
+        margin: -300px 100px -330px;
+        max-width: 200px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .textoDesenv{
+        padding: 0;
+        display: grid;
+        grid-template-areas:
+        "caneta"
+        "titulo"
+        "texto1"
+        "texto2";
+        grid-template-columns: 20px 1fr 40px;
+        grid-column: 1/6;
+        row-gap: 0;
+        color:white;
+        align-self: center;
+    }
+    
+    .textoDesenv h1{
+        grid-area: titulo;
+        grid-column: 2;
+        margin-top: initial;
+        margin-bottom: 20px;
+    }
+    
+    .coluna1{
+        grid-area: texto1;
+        grid-column: 2;
+    }
+    
+    .coluna2{
+        grid-area: texto2;
+        grid-column: 2;
+        align-self: start;
+    }
+
+    #caneta {
+        grid-area: caneta;
+        grid-column: 2;
+        width: 150px;
+        margin: -50px auto;
+    }
+
+    details{
+        display: initial;
+        margin-bottom: 10px;
+    }
+
+    .pMob{
+        display: none;
+    }
+
+    summary{
+        font-size: .8rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        color: var(--destaque);
+    }
+
+    summary::marker {
+        color: white;
+      }
+}
+
+@media (max-width: 350px) {
+    .textoDesenv{
+        padding: 0;
+        display: grid;
+        grid-template-areas:
+        "caneta"
+        "titulo"
+        "texto1"
+        "texto2";
+        grid-template-columns: 20px 1fr 20px;
+        grid-column: 1/6;
+        row-gap: 0;
+        color:white;
+        align-self: center;
+    }
+    
+    .textoDesenv h1{
+        grid-area: titulo;
+        grid-column: 2;
+        margin-top: initial;
+        margin-bottom: 20px;
+    }
+    
+    .coluna1{
+        grid-area: texto1;
+        grid-column: 2;
+    }
+    
+    .coluna2{
+        grid-area: texto2;
+        grid-column: 2;
+        align-self: start;
+    }
+
+    #caneta {
+        display: none;
+    }
+
+    details{
+        display: initial;
+        margin-bottom: 10px;
+    }
+
+    .pMob{
+        display: none;
+    }
+
+    summary{
+        font-size: .8rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        color: var(--destaque);
+    }
+
+    summary::marker {
+        color: white;
+      }
+}

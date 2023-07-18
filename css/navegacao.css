@@ -1,0 +1,27 @@
+.navegacao{
+    position: fixed;
+    top: 35%;
+    right: 0;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    margin: 0 33px 0 0;
+    z-index: 7;
+    gap: 160px
+}
+
+.navegacao a{
+    color: var(--destaque);
+    transition: .2s ease-in-out all;
+}
+
+.navegacao a:hover{
+    color: var(--branco);
+}
+
+@media (max-width: 550px) {
+    .navegacao{
+        display: flex;
+    }
+}

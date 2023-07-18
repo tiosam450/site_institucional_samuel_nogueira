@@ -1,0 +1,170 @@
+/* portfólio */
+.portfolio {
+    background: url(../img/bg/bg.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.containerPortfolio {
+    grid-column: 2/5;
+    grid-row: 1/3;
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 300px));
+    opacity: 0;
+}  
+
+.card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.card p {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3em;
+    color: #fff;
+    text-align: center;
+    transition: .3s ease-in-out all;
+
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s ease-in-out all;
+}
+
+.card img:hover {
+    opacity: .2;
+    transform: scale(1.02);
+}
+
+.card:hover p {
+    opacity: 1;
+}
+
+.portfolio a{
+    grid-column: 2/5;
+    grid-row: 2;
+    margin: 0 auto;
+    color: var(--branco);
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s ease-in-out all;
+}
+
+.portfolio a:hover{
+    grid-column: 1/6;
+    margin: 0 auto;
+    color: var(--destaque);
+}
+
+.viewPortfolio{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0);
+    z-index: 500;
+}
+
+.containerPort{
+    position: relative;
+    overflow-y: scroll;
+}
+
+.containerPort img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.viewPortfolio p{
+    position:fixed;
+    font-weight: 900;
+    font-size: 1.2em;
+    color: white;
+    top: 0;
+    right: 0;
+    padding: 20px 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.viewPortfolio p:hover{
+    color: var(--destaque);
+}
+
+/* Personalize a barra de rolagem vertical */
+::-webkit-scrollbar {
+    width: 10px; /* largura da barra de rolagem */
+    background-color: #f2f2f2; /* cor de fundo desejada */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--destaque); /* cor do indicador de rolagem */
+    border-radius: 50px;
+  }
+  
+  /* Personalize a barra de rolagem horizontal (opcional) */
+  ::-webkit-scrollbar-track {
+    background-color: var(--cinza); /* cor de fundo da trilha */
+  }
+  
+
+@media (max-width: 1366px) {
+    .containerPortfolio {
+        grid-template-columns: repeat(4, minmax(150px, 200px));
+    }
+
+    .card p {
+        font-size: .8em;
+    }
+}
+
+@media (max-width: 1279px) {
+
+    .containerPortfolio {
+        grid-column: 1/6;
+        max-width: 90%;
+        margin: auto;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 300px));
+    }
+
+    .card p {
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .containerPortfolio {
+        grid-column: 1/5;
+        max-width: 90%;
+        margin: auto;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 250px));
+    }
+
+    .card p {
+        font-size: .8em;
+    }
+
+    .containerPort{
+        width: 100%;    
+    }
+}
